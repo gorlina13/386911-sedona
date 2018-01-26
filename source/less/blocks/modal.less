@@ -1,0 +1,42 @@
+.modal {
+  color: #000000;
+
+  &--error {
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background-color: #ffffff;
+  }
+
+  &--success {
+    background-color: @grey-bg-color;
+  }
+}
+
+.modal__text {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 44px;
+
+  background-color: #ffffff;
+}
+
+.modal__title {
+  padding-bottom: 34px;
+
+  .primary-text-style();
+}
+
+.modal__description {
+  .second-text-style();
+  line-height: 24px;
+
+  &--error {
+    padding-bottom: 23px;
+  }
+
+  &--success {
+    padding-bottom: 33px;
+  }
+}

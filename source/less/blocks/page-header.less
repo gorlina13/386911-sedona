@@ -1,0 +1,65 @@
+.page-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.page-header__logo {
+  z-index: 1;
+
+  display: block;
+  order: 1;
+  margin-bottom: -26px;
+  padding: 0 20px;
+
+  outline: 2px solid crimson;
+}
+
+.page-header__logo-image {
+  display: block;
+  width: 102px;
+  height: 83px;
+  margin: 0 auto;
+}
+
+.page-header__lettering {
+  order: 2;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #7c8388;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: 2px solid darkorange;
+
+  &--index {
+    padding-top: 90px;
+    padding-bottom: 85px;
+  }
+
+  &--inner-page {
+    padding-top: 52px;
+    padding-bottom: 67px;
+  }
+}
+
+.page-header__lettering-image {
+  display: block;
+  margin: 0 auto;
+
+  &--index {
+    width: 280px;
+    height: 214px;
+  }
+
+  &--inner-page {
+    width: 230px;
+    height: 40px;
+  }
+}
