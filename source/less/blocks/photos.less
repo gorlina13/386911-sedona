@@ -1,5 +1,25 @@
 .photos {
+  width: 320px;
+  margin: 0 auto;
+
   color: #000000;
 
   background-color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos {
+    width: 1200px;
+    padding: 0;
+  }
 }

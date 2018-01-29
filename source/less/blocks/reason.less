@@ -1,4 +1,7 @@
 .reason {
+  width: 320px;
+  margin: 0 auto;
+
   outline: 1px solid purple;
 
   &--short {
@@ -58,4 +61,51 @@
   width: 320px;
   height: 260px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .reason {
+    display: flex;
+    width: 768px;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--short {
+      display: block;
+      width: 256px;
+      margin: 0;
+    }
+  }
+
+  .reason__main {
+    width: 256px;
+  }
+
+  .reason__title {
+    font-size: 21px;
+  }
+
+  .reason__illustration {
+    width: 512px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reason {
+    width: 1200px;
+
+    &--short {
+      width: 400px;
+    }
+  }
+
+  .reason__main {
+    width: 400px;
+  }
+
+  .reason__illustration {
+    width: 800px;
+  }
 }
