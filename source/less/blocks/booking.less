@@ -1,4 +1,6 @@
 .booking {
+  width: 320px;
+  margin: 0 auto;
   padding-top: 30px;
   padding-right: 20px;
   padding-bottom: 50px;
@@ -23,4 +25,21 @@
 
   .primary-text-style();
   font-size: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .booking {
+    width: 768px;
+  }
+
+  .booking__lead {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .booking {
+    width: 1200px;
+  }
 }

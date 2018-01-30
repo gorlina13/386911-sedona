@@ -22,3 +22,40 @@
   .second-text-style();
   text-align: left;
 }
+
+@media (min-width: @tablet-width) {
+  .feature {
+    width: 256px;
+    padding-top: 160px;
+    padding-right: 45px;
+    padding-bottom: 60px;
+    padding-left: 45px;
+
+    &--souvenirs {
+      order: 3;
+    }
+  }
+
+  .feature__title {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .feature__description {
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feature {
+    width: 400px;
+    padding-right: 55px;
+    padding-left: 55px;
+    padding-bottom: 83px;
+
+    &--souvenirs {
+      padding-right: 90px;
+      padding-left: 90px;
+    }
+  }
+}

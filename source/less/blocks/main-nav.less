@@ -1,5 +1,70 @@
 .main-nav {
+  position: relative;
+
+  width: 320px;
+  margin: 0 auto;
+
   color: #ffffff;
 
   background-color: @site-theme-color;
+  outline: 1px solid blue;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 1;
+
+  display: block;
+  width: 64px;
+  height: 56px;
+
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+
+  background-color: @site-theme-color;
+  outline: 1px solid red;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    top: 26px;
+    right: 20px;
+
+    display: block;
+    width: 30px;
+    height: 4px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }

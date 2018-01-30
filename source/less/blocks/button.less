@@ -13,4 +13,34 @@
   &--submit {
     font-size: 21px;
   }
+
+  &--error {
+    width: 180px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 458px;
+
+    &--submit {
+      width: 324px;
+    }
+
+    &--error {
+      width: 272px;
+
+      font-size: 21px;
+    }
+
+    &--success {
+      font-size: 21px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--submit {
+    width: 480px;
+  }
 }

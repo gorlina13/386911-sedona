@@ -1,4 +1,6 @@
 .video {
+  width: 320px;
+  margin: 0 auto;
   padding-top: 36px;
   padding-bottom: 38px;
 }
@@ -18,4 +20,25 @@
   padding-bottom: 30px;
 
   .primary-text-style();
+}
+
+@media (min-width: @tablet-width) {
+  .video {
+    width: 768px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .video__lead {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    width: 1200px;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
 }

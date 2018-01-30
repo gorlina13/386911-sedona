@@ -5,10 +5,11 @@
 }
 
 .page-main__title {
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding-top: 38px;
-  padding-right: 33px;
-  padding-left: 33px;
+  padding-right: 32px;
+  padding-left: 32px;
   padding-bottom: 30px;
 
   .primary-text-style();
@@ -17,15 +18,22 @@
 }
 
 .page-main__intro {
-  margin: 0;
-  padding-right: 33px;
-  padding-left: 33px;
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 32px;
+  padding-left: 32px;
   padding-bottom: 24px;
 
   .second-text-style();
   line-height: 24px;
 
   outline: 1px solid blue;
+
+  &--form {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
 
   &--index {
     line-height: 26px;
@@ -36,10 +44,68 @@
     padding-left: 25px;
     padding-bottom: 30px;
   }
+}
 
-  &--form {
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    width: 460px;
+    padding-top: 72px;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 20px;
+
+    font-size: 30px;
+    // в макете на внутренних страницах высота строки 26px, то есть меньше, чем размер шрифта
+    line-height: 30px;
+
+    &--index {
+      width: 490px;
+      padding-top: 48px;
+
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+
+  .page-main__intro {
+    width: 480px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    &--form {
+      padding-bottom: 76px;
+    }
+
+    &--index {
+      width: 530px;
+      padding-bottom: 50px;
+    }
+
+    &--photo {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-bottom: 70px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__title {
+    padding-top: 106px;
+
+    &--index {
+      padding-top: 46px;
+    }
+  }
+
+  .page-main__intro {
+    padding-bottom: 53px;
+
+    &--form {
+      padding-bottom: 66px;
+    }
+
+    &--photo {
+      padding-bottom: 73px;
+    }
   }
 }

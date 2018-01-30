@@ -1,5 +1,10 @@
 .modal {
+  width: 320px;
+  margin: 0 auto;
+
   color: #000000;
+
+  outline: 1px solid crimson;
 
   &--error {
     padding-top: 40px;
@@ -38,5 +43,20 @@
 
   &--success {
     padding-bottom: 33px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal--error {
+    width: 400px;
+  }
+
+  .modal--success {
+    width: 640px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
   }
 }

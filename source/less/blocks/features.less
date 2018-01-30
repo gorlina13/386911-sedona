@@ -1,8 +1,24 @@
 .features__list {
+  width: 320px;
   .list-reset();
+  margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 40px;
 
   outline: 1px solid teal;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: flex;
+    width: 768px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__list {
+    width: 1200px;
+  }
 }
