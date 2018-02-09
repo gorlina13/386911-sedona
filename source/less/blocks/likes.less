@@ -1,7 +1,45 @@
+.likes {
+  display: flex;
+
+  padding-top: 6px;
+}
+
+.likes__like-button {
+  width: 23px;
+  height: 21px;
+  margin-right: 13px;
+
+  background-color: transparent;
+  background-image: url("../../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
 .likes__count {
+  padding-top: 2px;
+
   font: bold 14px/24px @font-family;
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .likes {
+    padding-top: 11px;
+  }
+
+  .likes__like-button {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .likes__count {
+    color: #ffffff;
+  }
 }

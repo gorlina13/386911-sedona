@@ -1,6 +1,7 @@
 @font-face {
   font-family: "PT Sans";
-  src:  url("../fonts/ptsans.woff2") format("woff2"),
+  src:
+    url("../fonts/ptsans.woff2") format("woff2"),
     url("../fonts/ptsans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -8,7 +9,8 @@
 
 @font-face {
   font-family: "PT Sans";
-  src:  url("../fonts/ptsansbold.woff2") format("woff2"),
+  src:
+    url("../fonts/ptsansbold.woff2") format("woff2"),
     url("../fonts/ptsansbold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -40,13 +42,16 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
+
   border: 0;
 
   white-space: nowrap;

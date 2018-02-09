@@ -7,62 +7,62 @@
 .page-main__title {
   width: 320px;
   margin: 0 auto;
-  padding-top: 38px;
-  padding-right: 32px;
-  padding-left: 32px;
-  padding-bottom: 30px;
+  padding: 39px 32px 28px;
 
   .primary-text-style();
 
-  outline: 1px solid blue;
+  &--form {
+    padding-top: 38px;
+    padding-bottom: 27px;
+  }
+
+  &--photo {
+    padding-top: 38px;
+    padding-bottom: 26px;
+  }
 }
 
 .page-main__intro {
   width: 320px;
   margin: 0 auto;
-  padding-right: 32px;
-  padding-left: 32px;
-  padding-bottom: 24px;
 
   .second-text-style();
   line-height: 24px;
 
-  outline: 1px solid blue;
-
   &--form {
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding: 0 20px 16px;
   }
 
   &--index {
+    padding: 0 32px 23px;
+
     line-height: 26px;
   }
 
   &--photo {
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-bottom: 30px;
+    padding: 0 25px 27px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .page-main__title {
     width: 460px;
-    padding-top: 72px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 65px 20px 24px;
 
     font-size: 30px;
-    // в макете на внутренних страницах высота строки 26px, то есть меньше, чем размер шрифта
-    line-height: 30px;
+    line-height: 40px;
 
     &--index {
       width: 490px;
-      padding-top: 48px;
+      padding-top: 51px;
 
       font-size: 21px;
       line-height: 26px;
+    }
+
+    &--photo {
+      padding-top: 67px;
+      padding-bottom: 23px;
     }
   }
 
@@ -72,7 +72,7 @@
     padding-left: 20px;
 
     &--form {
-      padding-bottom: 76px;
+      padding-bottom: 75px;
     }
 
     &--index {
@@ -81,31 +81,31 @@
     }
 
     &--photo {
-      padding-right: 25px;
-      padding-left: 25px;
-      padding-bottom: 70px;
+      padding: 0 25px 68px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__title {
-    padding-top: 106px;
+    padding-top: 104px;
 
     &--index {
-      padding-top: 46px;
+      padding-top: 50px;
     }
   }
 
   .page-main__intro {
-    padding-bottom: 53px;
-
     &--form {
-      padding-bottom: 66px;
+      padding-bottom: 58px;
     }
 
     &--photo {
-      padding-bottom: 73px;
+      padding-bottom: 71px;
+    }
+
+    &--index {
+      padding-bottom: 52px;
     }
   }
 }

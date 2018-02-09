@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
+    <div class="page-wrapper">
       <header class="page-header">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона — небольшой городок в Аризоне">
         </a>
-        <nav class="main-nav main-nav--opened">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -43,7 +43,7 @@
           <h2 class="visually-hidden">Фотографии Седоны</h2>
           <article class="photo photo--wide">
             <a class="photo__link photo__link--wide" href="#">
-              <img class="photo__preview-image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
+              <img class="photo__preview-image photo__preview-image--wide" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
             </a>
             <div class="photo__info">
               <div class="photo__description">
@@ -72,7 +72,7 @@
                 <button class="likes__like-button" type="button">
                   <span class="visually-hidden">Нравится!</span>
                 </button>
-                <span class="likes__count">1350</span>
+                <span class="likes__count">143</span>
               </div>
             </div>
           </article>
@@ -89,7 +89,7 @@
                 <button class="likes__like-button" type="button">
                   <span class="visually-hidden">Нравится!</span>
                 </button>
-                <span class="likes__count">1350</span>
+                <span class="likes__count">96</span>
               </div>
             </div>
           </article>
@@ -106,7 +106,7 @@
                 <button class="likes__like-button" type="button">
                   <span class="visually-hidden">Нравится!</span>
                 </button>
-                <span class="likes__count">1350</span>
+                <span class="likes__count">254</span>
               </div>
             </div>
           </article>
@@ -170,5 +170,7 @@
         </p>
       </footer>
     </div>
+
+    <script src="js/nav.js"></script>
   </body>
 </html>

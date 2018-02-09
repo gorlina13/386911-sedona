@@ -1,15 +1,12 @@
 .video {
   width: 320px;
   margin: 0 auto;
-  padding-top: 36px;
-  padding-bottom: 38px;
+  padding: 32px 0 38px;
 }
 
 .video__text {
   margin: 0;
-  padding-right: 40px;
-  padding-left: 40px;
-  padding-bottom: 36px;
+  padding: 0 40px 35px;
 
   .second-text-style();
   line-height: 24px;
@@ -17,7 +14,7 @@
 
 .video__lead {
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 26px;
 
   .primary-text-style();
 }
@@ -25,11 +22,18 @@
 @media (min-width: @tablet-width) {
   .video {
     width: 768px;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding: 59px 60px 40px;
+  }
+
+  .video__text {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 73px;
   }
 
   .video__lead {
+    padding-bottom: 23px;
+
     font-size: 30px;
     line-height: 40px;
   }
@@ -37,8 +41,8 @@
 
 @media (min-width: @desktop-width) {
   .video {
-    width: 1200px;
-    padding-right: 200px;
-    padding-left: 200px;
+    width: 920px;
+    padding-top: 64px;
+    padding-bottom: 85px;
   }
 }
