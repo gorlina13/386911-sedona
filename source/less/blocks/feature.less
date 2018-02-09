@@ -1,16 +1,62 @@
 .feature {
-  padding-top: 36px;
+  position: relative;
+
+  padding-top: 27px;
   padding-left: 50px;
 
   color: #000000;
 
   background-color: #ffffff;
-  outline: 1px solid cyan;
+
+  &--food {
+    padding-top: 28px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.feature--lodging::before {
+  left: 0;
+
+  width: 39px;
+  height: 37px;
+
+  background-image: url("../../img/icon-house.svg");
+  background-size: 39px 37px;
+}
+
+.feature--souvenirs::before {
+  left: 4px;
+
+  width: 32px;
+  height: 38px;
+
+  background-image: url("../../img/icon-gift.svg");
+  background-size: 32px 38px;
+}
+
+.feature--food::before {
+  left: -2px;
+  top: 23px;
+
+  width: 40px;
+  height: 35px;
+
+  background-image: url("../../img/icon-burger.svg");
+  background-size: 40px 35px;
 }
 
 .feature__title {
   margin: 0;
-  padding-bottom: 16px;
+  padding-bottom: 14px;
 
   .primary-text-style();
   text-align: left;
@@ -23,26 +69,68 @@
   text-align: left;
 }
 
+.feature--souvenirs br {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .feature {
     width: 256px;
-    padding-top: 160px;
-    padding-right: 45px;
-    padding-bottom: 60px;
-    padding-left: 45px;
+    padding: 159px 45px 62px;
+
+    &--food {
+      padding-right: 49px;
+      padding-left: 49px;
+    }
 
     &--souvenirs {
       order: 3;
     }
   }
 
+  .feature--lodging::before {
+    left: 90px;
+    top: 60px;
+
+    width: 76px;
+    height: 72px;
+
+    background-size: 76px 72px;
+  }
+
+  .feature--souvenirs::before {
+    left: 96px;
+    top: 57px;
+
+    width: 64px;
+    height: 75px;
+
+    background-size: 64px 75px;
+  }
+
+  .feature--food::before {
+    left: 90px;
+    top: 63px;
+
+    width: 76px;
+    height: 68px;
+
+    background-size: 76px 68px;
+  }
+
   .feature__title {
+    padding-bottom: 20px;
+
     font-size: 21px;
     text-align: center;
   }
 
   .feature__description {
     text-align: center;
+  }
+
+  .feature--souvenirs br {
+    display: inline;
   }
 }
 
@@ -57,5 +145,17 @@
       padding-right: 90px;
       padding-left: 90px;
     }
+  }
+
+  .feature--lodging::before {
+    left: 162px;
+  }
+
+  .feature--food::before {
+    left: 162px;
+  }
+
+  .feature--souvenirs::before {
+    left: 168px;
   }
 }

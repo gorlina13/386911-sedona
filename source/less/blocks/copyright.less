@@ -1,17 +1,52 @@
+.copyright {
+  padding-top: 36px;
+
+  font-size: 0;
+  line-height: 40px;
+  text-align: center;
+}
+
 .copyright__text {
+  display: inline-block;
+
   .primary-text-style();
   font-size: 14px;
   font-weight: normal;
+  vertical-align: middle;
+}
+
+.copyright__link {
+  display: inline-block;
+  margin-left: 13px;
+  width: 28px;
+  height: 34px;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+}
+
+.copyright__logo-image {
+  display: block;
+
+  width: 28px;
+  height: 34px;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
-    width: 196px;
+    width: 256px;
+    padding-top: 3px;
+    padding-bottom: 6px;
+    padding-right: 60px;
+
+    text-align: right;
   }
 }
 
 @media (min-width: @desktop-width) {
   .copyright {
     width: 400px;
+    padding-right: 44px;
   }
 }

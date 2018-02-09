@@ -1,6 +1,4 @@
 .page-header {
-  position: relative;
-
   display: flex;
   flex-direction: column;
 
@@ -10,45 +8,64 @@
 }
 
 .page-header__logo {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
+
+  order: 2;
 
   display: block;
-  order: 1;
-  // или вместо отрицательного отступа:
-  // height: 57px;
-  margin-bottom: -26px;
+  margin-bottom: -27px;
   padding: 0 20px;
-
-  outline: 2px solid crimson;
 }
 
 .page-header__logo-image {
   display: block;
   width: 102px;
-  height: 83px;
+  height: 84px;
   margin: 0 auto;
 }
 
 .page-header__lettering {
-  order: 2;
+  position: relative;
+
+  order: 3;
+
   padding-right: 20px;
   padding-left: 20px;
 
-  background-color: #9297a1;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  outline: 2px solid darkorange;
 
   &--index {
     padding-top: 90px;
     padding-bottom: 85px;
+
+    background-color: #9297a1;
+    background-position: center;
   }
 
   &--inner-page {
-    padding-top: 52px;
+    padding-top: 51px;
     padding-bottom: 67px;
+
+    background-color: #816365;
+    background-position: center bottom;
   }
+}
+
+.page-header__lettering::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 26px;
+
+  background-image: url("../../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .page-header__lettering-image {
@@ -69,10 +86,11 @@
 @media (min-width: @tablet-width) {
   .page-header__logo {
     width: 102px;
-    height: 83px;
+    height: 84px;
     margin-top: -57px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
+    padding: 0;
   }
 
   .page-header__lettering {
@@ -89,7 +107,15 @@
     &--inner-page {
       padding-top: 95px;
       padding-bottom: 117px;
+
+      background-position: right bottom;
     }
+  }
+
+  .page-header__lettering::after {
+    height: 57px;
+
+    outline: 1px solid crimson;
   }
 
   .page-header__lettering-image--index {

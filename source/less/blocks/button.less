@@ -7,7 +7,9 @@
   .primary-text-style();
   color: #ffffff;
 
-  background-color: @site-theme-color;
+  background-color: @sedona-color;
+  border: none;
+  cursor: pointer;
 
   &--booking,
   &--submit {
@@ -17,6 +19,25 @@
   &--error {
     width: 180px;
   }
+
+  &--success {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    background-color: @sedona-color-mid;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: @sedona-color-dark;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: @grey-bg-color-dark;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -25,6 +46,8 @@
 
     &--submit {
       width: 324px;
+      margin: 0;
+      padding-right: 27px;
     }
 
     &--error {
@@ -34,6 +57,8 @@
     }
 
     &--success {
+      margin-top: 45px;
+
       font-size: 21px;
     }
   }

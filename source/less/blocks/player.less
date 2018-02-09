@@ -1,13 +1,169 @@
 .player {
-  // временно для сетки
-  min-height: 268px;
+  width: 320px;
+  margin: 0 auto;
+}
 
-  outline: 2px solid teal;
+.player__playback-area {
+  width: 320px;
+  height: 201px;
+}
+
+.player__presentation {
+  width: 100%;
 }
 
 .player__controls {
-  // временно для сетки
-  min-height: 110px;
+  width: 280px;
+  margin: -45px auto 0;
+}
 
-  outline: 2px solid teal;
+.player__scale {
+  position: relative;
+
+  height: 45px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    top: 22px;
+
+    width: 236px;
+    height: 3px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.player__scroller {
+  position: absolute;
+
+  left: 58px;
+  top: 19px;
+
+  width: 9px;
+  height: 9px;
+  padding: 0;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.player__buttons {
+  display: flex;
+
+  padding: 23px;
+  padding-top: 22px;
+  padding-left: 25px;
+
+  background-color: @grey-bg-color;
+}
+
+.player__button {
+  height: 20px;
+  padding: 0;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+
+  &--replay {
+    width: 16px;
+
+    background-image: url("../../img/icon-video-replay.svg");
+  }
+
+  &--subtitles {
+    width: 32px;
+    margin-left: auto;
+    margin-right: 31px;
+    padding-top: 1px;
+
+    background-image: url("../../img/icon-video-subtitles.svg");
+  }
+
+  &--fullscreen {
+    width: 20px;
+    padding-top: 1px;
+
+    background-image: url("../../img/icon-video-fullscreen.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .player {
+    width: 648px;
+  }
+
+  .player__playback-area {
+    width: 648px;
+    height: 500px;
+
+    outline: 1px solid crimson;
+  }
+
+  .player__controls {
+    position: relative;
+
+    width: 648px;
+    margin-top: -93px;
+  }
+
+  .player__scale {
+    height: 93px;
+
+    &::before {
+      left: 93px;
+      right: 167px;
+      top: 45px;
+
+      width: auto;
+    }
+  }
+
+  .player__scroller {
+    left: 206px;
+    top: 42px;
+  }
+
+  .player__buttons {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 0;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 41px;
+    background-color: transparent;
+  }
+
+  .player__button {
+    outline: 1px solid crimson;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .player {
+    width: 800px;
+  }
+
+  .player__playback-area {
+    width: 800px;
+  }
+
+  .player__controls {
+    width: 800px;
+  }
 }

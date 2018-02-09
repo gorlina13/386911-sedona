@@ -1,39 +1,85 @@
 .site-list {
   .list-reset();
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 6px;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    opacity: 0.2;
+  }
 }
 
 .site-list__link {
   display: block;
-  padding: 8px 20px;
+  padding: 7px 20px;
 
   .primary-text-style();
   line-height: 40px;
   color: #ffffff;
 
-  outline: 2px solid darkolivegreen;
+  background-color: @sedona-color;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+
+  &[href] {
+    cursor: pointer;
+  }
+}
+
+.site-list__item:first-child .site-list__link {
+  border-top-color: transparent;
+}
+
+.site-list__item:last-child .site-list__link {
+  border-bottom: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .site-list__link[href] {
+    &:hover {
+      background-color: @sedona-color-mid;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      background-color: @sedona-color-dark;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
     flex-wrap: wrap;
+
     width: 768px;
     margin: 0 auto;
+
+    &::after {
+      display: none;
+    }
   }
 
   .site-list__item {
-    width: 153px;
     flex-shrink: 0;
+
+    width: 153px;
   }
 
-  .site-list__item:nth-child(5n+2) {
+  .site-list__item:nth-child(4n+2) {
     margin-right: 78px;
-    // margin-right: auto;
   }
 
-  .site-list__item:nth-child(5n+3) {
+  .site-list__item:nth-child(4n+3) {
     margin-left: 78px;
-    // margin-left: auto;
   }
 
   .site-list__link {
@@ -43,6 +89,31 @@
     font-size: 14px;
     line-height: 26px;
     color: #000000;
+
+    background-color: #ffffff;
+    border: none;
+  }
+
+  .site-list__link[href] {
+    &:hover {
+      color: @sedona-color;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .site-list__item--active .site-list__link {
+    color: #766357;
+
+    &:hover {
+      color: #604e43;
+    }
+
+    &:active {
+      color: rgba(118, 99, 87, 0.3);
+    }
   }
 }
 
@@ -55,11 +126,11 @@
     width: 239px;
   }
 
-  .site-list__item:nth-child(5n+2) {
+  .site-list__item:nth-child(4n+2) {
     margin-right: 122px;
   }
 
-  .site-list__item:nth-child(5n+3) {
+  .site-list__item:nth-child(4n+3) {
     margin-left: 122px;
   }
 }
