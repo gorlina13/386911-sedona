@@ -123,11 +123,11 @@
 }
 
 .feedback-form__text-input--tel + .feedback-form__text-label::after {
-  background-image: url("../../img/icon-phone.svg");
+  background-image: url("/../../img/icon-phone.svg");
 }
 
 .feedback-form__text-input--email + .feedback-form__text-label::after {
-  background-image: url("../../img/icon-mail.svg");
+  background-image: url("/../../img/icon-mail.svg");
 }
 
 .feedback-form__text-input {
@@ -234,7 +234,7 @@
   width: 55px;
   height: 56px;
 
-  background-image: url("../../img/icon-tick.svg");
+  background-image: url("/../../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -453,11 +453,13 @@
 
   .feedback-form__text-input--contacts {
     position: relative;
-    z-index: 12;
+    z-index: 20;
 
     width: 648px;
 
     & + .feedback-form__text-label {
+      z-index: 20;
+
       width: 648px;
     }
   }
