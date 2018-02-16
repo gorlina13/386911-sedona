@@ -54,9 +54,9 @@
           </div>
           <figure class="reason__illustration">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg">
-              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg">
-              <img class="reason__illustration-image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg" alt="Вид Седоны">
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img class="reason__illustration-image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Вид Седоны">
             </picture>
           </figure>
         </section>
@@ -85,9 +85,9 @@
           </div>
           <figure class="reason__illustration">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg, img/main-bridge-desktop@2x.jpg">
-              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg, img/main-bridge-tablet@2x.jpg">
-              <img class="reason__illustration-image" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg" alt="Фото Моста Дьявола">
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img class="reason__illustration-image" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фото Моста Дьявола">
             </picture>
           </figure>
         </section>
@@ -149,9 +149,10 @@
         </ul>
         <p class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">HTML Академия</span>
-            <img class="copyright__logo-image" src="img/logo-htmlacademy.svg" width="28" height="34" alt="HTML Academy">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
+            <svg class="copyright__logo-image" width="26.943" height="34.09" role="img">
+              <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+            </svg>
           </a>
         </p>
       </footer>
@@ -159,6 +160,7 @@
 
     <script src="js/nav.js"></script>
     <script src="js/picturefill.js" async></script>
-
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody();</script>
   </body>
 </html>

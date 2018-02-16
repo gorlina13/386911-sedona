@@ -153,8 +153,10 @@
         </ul>
         <p class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo-image" src="img/logo-htmlacademy.svg" width="28" height="34" alt="HTML Academy">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
+            <svg class="copyright__logo-image" width="26.943" height="34.09" role="img">
+              <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+            </svg>
           </a>
         </p>
       </footer>
@@ -176,5 +178,7 @@
 
     <script src="js/nav.js"></script>
     <script src="js/picturefill.js" async></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody();</script>
   </body>
 </html>
