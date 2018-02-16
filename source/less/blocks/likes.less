@@ -5,16 +5,18 @@
 }
 
 .likes__like-button {
-  width: 23px;
-  height: 21px;
+  width: 22px;
+  height: 20px;
   margin-right: 13px;
+  padding: 0;
 
   background-color: transparent;
-  background-image: url("../../img/icon-like.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   cursor: pointer;
+}
+
+.likes__like-icon {
+  fill: #000000;
   opacity: 0.3;
 }
 
@@ -41,5 +43,10 @@
 @media (min-width: @desktop-width) {
   .likes__count {
     color: #ffffff;
+  }
+
+  .likes__like-icon {
+    fill: #ffffff;
+    opacity: 1;
   }
 }

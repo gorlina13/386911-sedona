@@ -72,15 +72,11 @@
   padding: 0;
 
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   cursor: pointer;
 
   &--replay {
     width: 16px;
-
-    background-image: url("../../img/icon-video-replay.svg");
   }
 
   &--subtitles {
@@ -88,15 +84,24 @@
     margin-left: auto;
     margin-right: 31px;
     padding-top: 1px;
-
-    background-image: url("../../img/icon-video-subtitles.svg");
   }
 
   &--fullscreen {
     width: 20px;
     padding-top: 1px;
+  }
+}
 
-    background-image: url("../../img/icon-video-fullscreen.svg");
+.player__icon {
+  fill: #5c6870;
+
+  &:hover {
+    fill: @grey-text-color;
+  }
+
+  &:active {
+    fill: @grey-text-color;
+    opacity: 0.3;
   }
 }
 
@@ -153,8 +158,8 @@
     background-color: transparent;
   }
 
-  .player__button {
-    outline: 1px solid crimson;
+  .player__icon {
+    fill: #ffffff;
   }
 }
 
