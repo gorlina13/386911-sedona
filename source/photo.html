@@ -11,6 +11,10 @@
     </script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <div class="page-wrapper">
       <header class="page-header">
         <a class="page-header__logo" href="index.html">
@@ -68,7 +72,7 @@
               <div class="photo__likes likes">
                 <button class="likes__like-button" type="button">
                   <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#like-icon"></use>
+                    <use xlink:href="#for-o-icon-like"></use>
                   </svg>
                   <span class="visually-hidden">Нравится!</span>
                 </button>
@@ -97,7 +101,7 @@
               <div class="photo__likes likes">
                 <button class="likes__like-button" type="button">
                   <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#like-icon"></use>
+                    <use xlink:href="#for-o-icon-like"></use>
                   </svg>
                   <span class="visually-hidden">Нравится!</span>
                 </button>
@@ -124,8 +128,8 @@
               </div>
               <div class="photo__likes likes">
                 <button class="likes__like-button" type="button">
-                  <svg class="likes__like-icon" width="22" height="20"  aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#like-icon"></use>
+                  <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
+                    <use xlink:href="#for-o-icon-like"></use>
                   </svg>
                   <span class="visually-hidden">Нравится!</span>
                 </button>
@@ -153,7 +157,7 @@
               <div class="photo__likes likes">
                 <button class="likes__like-button" type="button">
                   <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#like-icon"></use>
+                    <use xlink:href="#for-o-icon-like"></use>
                   </svg>
                   <span class="visually-hidden">Нравится!</span>
                 </button>
@@ -188,19 +192,19 @@
               <div class="player__buttons">
                 <button class="player__button player__button--replay">
                   <svg class="player__icon" width="16" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#replay-icon"></use>
+                    <use xlink:href="#for-o-icon-video-replay"></use>
                   </svg>
                   <span class="visually-hidden">Повторить</span>
                 </button>
                 <button class="player__button player__button--subtitles">
                   <svg class="player__icon" width="32" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#subtitles-icon"></use>
+                    <use xlink:href="#for-o-icon-video-subtitles"></use>
                   </svg>
                   <span class="visually-hidden">Субтитры</span>
                 </button>
                 <button class="player__button player__button--fullscreen">
                   <svg class="player__icon" width="20" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#fullscreen-icon"></use>
+                    <use xlink:href="#for-o-icon-video-fullscreen"></use>
                   </svg>
                   <span class="visually-hidden">Полный экран</span>
                 </button>
@@ -234,7 +238,7 @@
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
             <svg class="copyright__logo-image" width="26.943" height="34.09" role="img">
-              <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+              <use xlink:href="#for-o-logo-htmlacademy"></use>
             </svg>
           </a>
         </p>
@@ -242,7 +246,7 @@
     </div>
 
     <script src="js/nav.js"></script>
-    <script src="js/picturefill.js" async></script>
+    <script src="js/picturefill.js" async=""></script>
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
   </body>

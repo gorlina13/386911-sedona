@@ -11,6 +11,10 @@
     </script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <div class="page-wrapper">
       <header class="page-header">
         <a class="page-header__logo" href="index.html">
@@ -51,11 +55,11 @@
             <legend class="feedback-form__legend">Представьтесь:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--name">
-                <input class="feedback-form__text-input" type="text" name="first-name" id="first-name-field" placeholder="Петр" required autofocus>
+                <input class="feedback-form__text-input" type="text" name="first-name" id="first-name-field" placeholder="Петр" required="" autofocus="">
                 <label class="feedback-form__text-label" for="first-name-field">Имя<sup>*</sup>:</label>
               </li>
               <li class="feedback-form__item feedback-form__item--name">
-                <input class="feedback-form__text-input" type="text" name="second-name" id="second-name-field" placeholder="Иванов" required>
+                <input class="feedback-form__text-input" type="text" name="second-name" id="second-name-field" placeholder="Иванов" required="">
                 <label class="feedback-form__text-label" for="second-name-field">Фамилия<sup>*</sup>:</label>
               </li>
               <li class="feedback-form__item feedback-form__item--name">
@@ -69,11 +73,11 @@
             <legend class="feedback-form__legend">Контактная информация:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--contacts">
-                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--tel" type="tel" name="tel" id="tel-field" placeholder="Введите телефон" pattern="[0-9]{3}-[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
+                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--tel" type="tel" name="tel" id="tel-field" placeholder="Введите телефон" pattern="[0-9]{3}-[0-9]{1}-[0-9]{3}-[0-9]{3}" required="">
                 <label class="feedback-form__text-label" for="tel-field"><span>Контактный</span> телефон<sup>*</sup>:</label>
               </li>
               <li class="feedback-form__item feedback-form__item--contacts">
-                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--email" type="email" name="email" id="email-field" placeholder="Введите e-mail" required>
+                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--email" type="email" name="email" id="email-field" placeholder="Введите e-mail" required="">
                 <label class="feedback-form__text-label" for="email-field">Электронная почта<sup>*</sup>:</label>
               </li>
             </ul>
@@ -83,7 +87,7 @@
             <legend class="feedback-form__legend">Ваше общее впечатление:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item">
-                <input class="feedback-form__radio visually-hidden" type="radio" name="impression" id="positive" value="1" checked>
+                <input class="feedback-form__radio visually-hidden" type="radio" name="impression" id="positive" value="1" checked="">
                 <label class="feedback-form__radio-label" for="positive">Скорее положительное</label>
               </li>
               <li class="feedback-form__item">
@@ -101,11 +105,11 @@
             <legend class="feedback-form__legend">Посещенные достопримечательности:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--bridge">
-                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="bridge" id="bridge-field" value="devil-s-bridge" checked>
+                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="bridge" id="bridge-field" value="devil-s-bridge" checked="">
                 <label class="feedback-form__checkbox-label" for="bridge-field">Мост Дьявола</label>
               </li>
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--park">
-                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="park" id="park-field" value="slide-park" checked>
+                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="park" id="park-field" value="slide-park" checked="">
                 <label class="feedback-form__checkbox-label" for="park-field">Слайд-парк</label>
               </li>
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--bell">
@@ -113,7 +117,7 @@
                 <label class="feedback-form__checkbox-label" for="bell-field">Гора-Колокол</label>
               </li>
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--red-rock">
-                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="red-rock" id="red-rock-field" value="red-rock" checked>
+                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="red-rock" id="red-rock-field" value="red-rock" checked="">
                 <label class="feedback-form__checkbox-label" for="red-rock-field">Красные скалы</label>
               </li>
             </ul>
@@ -155,7 +159,7 @@
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
             <svg class="copyright__logo-image" width="26.943" height="34.09" role="img">
-              <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+              <use xlink:href="#for-o-logo-htmlacademy"></use>
             </svg>
           </a>
         </p>
@@ -173,11 +177,11 @@
         </div>
           <button class="modal__button button button--success" type="button">Закрыть окно</button>
       </div>
-      <div class="modal__overlay"></div>
+      <div class="overlay"></div>
     </div>
 
     <script src="js/nav.js"></script>
-    <script src="js/picturefill.js" async></script>
+    <script src="js/picturefill.js" async=""></script>
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
   </body>
