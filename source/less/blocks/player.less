@@ -71,9 +71,20 @@
   height: 20px;
   padding: 0;
 
+  color: #5c6870;
+
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: @grey-text-color;
+  }
+
+  &:active .player__icon {
+    opacity: 0.3;
+  }
 
   &--replay {
     width: 16px;
@@ -89,19 +100,6 @@
   &--fullscreen {
     width: 20px;
     padding-top: 1px;
-  }
-}
-
-.player__icon {
-  fill: #5c6870;
-
-  &:hover {
-    fill: @grey-text-color;
-  }
-
-  &:active {
-    fill: @grey-text-color;
-    opacity: 0.3;
   }
 }
 
@@ -158,8 +156,8 @@
     background-color: transparent;
   }
 
-  .player__icon {
-    fill: #ffffff;
+  .player__button {
+    color: #ffffff;
   }
 }
 
