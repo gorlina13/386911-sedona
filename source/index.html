@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона — Главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
     <script>
       document.createElement( "picture" );
     </script>
@@ -21,12 +22,12 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона — небольшой городок в Аризоне">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны — небольшого городка в Аризоне">
           </picture>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть/ Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -47,6 +48,7 @@
           <img class="page-header__lettering-image page-header__lettering-image--index" src="img/text-sedona-index.svg" width="282" height="214" alt="Добро пожаловать в великолепную Седону!">
         </div>
       </header>
+
       <main class="page-main">
         <h1 class="page-main__title page-main__title--index">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="page-main__intro page-main__intro--index">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -68,6 +70,7 @@
             </picture>
           </figure>
         </section>
+
         <section class="features">
           <h2 class="visually-hidden">Что вас ждет в Седоне?</h2>
           <ul class="features__list">
@@ -85,6 +88,7 @@
             </li>
           </ul>
         </section>
+
         <section class="reason reason--reverse ">
           <div class="reason__main">
             <h2 class="reason__title">Там есть Мост&nbsp;Дьявола</h2>
@@ -103,6 +107,7 @@
             </picture>
           </figure>
         </section>
+
         <section class="additional-reasons">
           <h2 class="visually-hidden">И другие причины выбрать Седону</h2>
           <ul class="additional-reasons__list">
@@ -130,7 +135,7 @@
             <b class="booking__lead">Заинтересовались?</b>
             Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a class="booking__button button button--booking" href="#">Найти гостиницу</a>
+          <a class="booking__button button button--booking" href="booking.html">Найти гостиницу</a>
         </section>
 
         <section class="map">
@@ -138,9 +143,10 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1674964.6613691328!2d-112.6702789936435!3d34.92111868954569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1517330802995" width="1200" height="350" allowfullscreen=""></iframe>
         </section>
       </main>
+
       <footer class="page-footer">
         <p class="page-footer__hashtag hashtag">
-          <a class="hashtag__link" href="#">#visitsedona</a>
+          <a class="hashtag__link" href="https://twitter.com/search?q=%23visitsedona&src=typd&lang=en">#visitsedona</a>
         </p>
         <ul class="page-footer__social-list social-list">
           <li class="social-list__item">
