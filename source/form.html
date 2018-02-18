@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона — Форма для отзыва</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
     <script>
       document.createElement( "picture" );
     </script>
@@ -21,12 +22,12 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона — небольшой городок в Аризоне">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны — небольшого городка в Аризоне">
           </picture>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть/ Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -47,6 +48,7 @@
           <img class="page-header__lettering-image page-header__lettering-image--inner-page" src="img/text-sedona.svg" width="229" height="39" alt="Седона">
         </div>
       </header>
+
       <main class="page-main">
         <h1 class="page-main__title page-main__title--form">Оставьте свой отзыв</h1>
         <p class="page-main__intro page-main__intro--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
@@ -55,12 +57,12 @@
             <legend class="feedback-form__legend">Представьтесь:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--name">
-                <input class="feedback-form__text-input" type="text" name="first-name" id="first-name-field" placeholder="Петр" required="" autofocus="">
+                <input class="feedback-form__text-input" type="text" name="first-name" id="first-name-field" placeholder="Петр" required>
                 <label class="feedback-form__text-label" for="first-name-field">Имя<sup>*</sup>:</label>
               </li>
               <li class="feedback-form__item feedback-form__item--name">
-                <input class="feedback-form__text-input" type="text" name="second-name" id="second-name-field" placeholder="Иванов" required="">
-                <label class="feedback-form__text-label" for="second-name-field">Фамилия<sup>*</sup>:</label>
+                <input class="feedback-form__text-input" type="text" name="surname" id="surname-field" placeholder="Иванов" required>
+                <label class="feedback-form__text-label" for="surname-field">Фамилия<sup>*</sup>:</label>
               </li>
               <li class="feedback-form__item feedback-form__item--name">
                 <input class="feedback-form__text-input" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович">
@@ -73,11 +75,11 @@
             <legend class="feedback-form__legend">Контактная информация:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--contacts">
-                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--tel" type="tel" name="tel" id="tel-field" placeholder="Введите телефон" pattern="[0-9]{3}-[0-9]{1}-[0-9]{3}-[0-9]{3}" required="">
+                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--tel" type="tel" name="tel" id="tel-field" placeholder="Введите телефон" required>
                 <label class="feedback-form__text-label" for="tel-field"><span>Контактный</span> телефон<sup>*</sup>:</label>
               </li>
               <li class="feedback-form__item feedback-form__item--contacts">
-                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--email" type="email" name="email" id="email-field" placeholder="Введите e-mail" required="">
+                <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--email" type="email" name="email" id="email-field" placeholder="Введите e-mail" required>
                 <label class="feedback-form__text-label" for="email-field">Электронная почта<sup>*</sup>:</label>
               </li>
             </ul>
@@ -87,7 +89,7 @@
             <legend class="feedback-form__legend">Ваше общее впечатление:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item">
-                <input class="feedback-form__radio visually-hidden" type="radio" name="impression" id="positive" value="1" checked="">
+                <input class="feedback-form__radio visually-hidden" type="radio" name="impression" id="positive" value="1" checked>
                 <label class="feedback-form__radio-label" for="positive">Скорее положительное</label>
               </li>
               <li class="feedback-form__item">
@@ -105,11 +107,11 @@
             <legend class="feedback-form__legend">Посещенные достопримечательности:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--bridge">
-                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="bridge" id="bridge-field" value="devil-s-bridge" checked="">
+                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="bridge" id="bridge-field" value="devil-s-bridge" checked>
                 <label class="feedback-form__checkbox-label" for="bridge-field">Мост Дьявола</label>
               </li>
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--park">
-                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="park" id="park-field" value="slide-park" checked="">
+                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="park" id="park-field" value="slide-park" checked>
                 <label class="feedback-form__checkbox-label" for="park-field">Слайд-парк</label>
               </li>
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--bell">
@@ -117,7 +119,7 @@
                 <label class="feedback-form__checkbox-label" for="bell-field">Гора-Колокол</label>
               </li>
               <li class="feedback-form__item feedback-form__item--showplaces feedback-form__item--red-rock">
-                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="red-rock" id="red-rock-field" value="red-rock" checked="">
+                <input class="feedback-form__checkbox visually-hidden" type="checkbox" name="red-rock" id="red-rock-field" value="red-rock" checked>
                 <label class="feedback-form__checkbox-label" for="red-rock-field">Красные скалы</label>
               </li>
             </ul>
@@ -134,9 +136,10 @@
           </div>
         </form>
       </main>
+
       <footer class="page-footer">
         <p class="page-footer__hashtag hashtag">
-          <a class="hashtag__link" href="#">#visitsedona</a>
+          <a class="hashtag__link" href="https://twitter.com/search?q=%23visitsedona&src=typd&lang=en">#visitsedona</a>
         </p>
         <ul class="page-footer__social-list social-list">
           <li class="social-list__item">
@@ -164,6 +167,7 @@
           </a>
         </p>
       </footer>
+
       <div class="modal modal--error">
         <p class="modal__title modal__title--error">Что-то пошло не так!</p>
         <p class="modal__description modal__description--error">Проверьте&nbsp;поля,&nbsp;выделенные красным, скорее&nbsp;всего&nbsp;вы забыли&nbsp;их&nbsp;заполнить</p>

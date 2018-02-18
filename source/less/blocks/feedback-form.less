@@ -158,7 +158,6 @@
 
   &:focus {
     background-color: #ffffff;
-    // border-color: @grey-bg-color-dark;
     outline: 4px solid @grey-bg-color-dark;
   }
 
@@ -261,11 +260,13 @@
   border-color: @grey-bg-color-dark;
 }
 
-.feedback-form__checkbox-label:hover::before {
+.feedback-form__checkbox-label:hover::before,
+.feedback-form__checkbox:focus + .feedback-form__checkbox-label::before {
   background-color: @grey-bg-color-dark;
 }
 
-.feedback-form__radio:checked + .feedback-form__radio-label:hover::before {
+.feedback-form__radio:checked + .feedback-form__radio-label:hover::before,
+.feedback-form__radio:checked:focus + .feedback-form__radio-label::before {
   background-color: @grey-text-color;
   border-color: @grey-bg-color-dark;
 }
@@ -300,6 +301,7 @@
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
+
     width: 768px;
     padding-right: 60px;
     padding-left: 60px;
