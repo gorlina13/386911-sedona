@@ -188,10 +188,27 @@
   }
 
   .reason__illustration {
+    position: relative;
+
     width: 800px;
+    height: 256px;
+    overflow: hidden;
   }
 
   .reason__illustration-image {
-    width: 800px;
+    position: absolute;
+
+    width: auto;
+    height: auto;
+
+    left: 0;
+
+    &--city {
+      top: -71px;
+    }
+
+    &--bridge {
+      top: -77px;
+    }
   }
 }
