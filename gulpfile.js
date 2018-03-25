@@ -85,7 +85,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("js/*.js");
+  gulp.watch("source/js/*.js", ["js"]);
   gulp.watch("source/*.html", ["html"]);
 });
 

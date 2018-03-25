@@ -1,10 +1,9 @@
 .map {
   position: relative;
 
-  width: 100vw;
+  width: 100%;
   min-width: 320px;
   height: 350px;
-  margin: 0 auto;
 
   background-image: url("/../../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -14,7 +13,6 @@
     content: "";
 
     position: absolute;
-    z-index: 5;
 
     left: 50%;
     top: 175px;
@@ -35,15 +33,15 @@
   }
 }
 
-.map iframe {
+.map__area {
   position: relative;
-  z-index: 10;
+  z-index: 5;
 
-  width: 100vw;
+  width: 100%;
   min-width: 320px;
   height: 350px;
-  border: 0;
 }
+
 
 @media (min-width: @tablet-width) {
   .map {
@@ -64,9 +62,5 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("/../../img/bg-map-desktop@2x.jpg");
     }
-  }
-
-  .map iframe {
-    width: 1200px;
   }
 }
