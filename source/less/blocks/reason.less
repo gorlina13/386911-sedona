@@ -31,26 +31,30 @@
   color: inherit;
 }
 
-.reason__number,
+.reason__number {
+  margin: 0;
+  padding-bottom: 15px;
+
+  .second-text-style();
+  color: #ffffff;
+
+  .reason--short & {
+    color: @gray-text-color;
+  }
+}
+
 .reason__description {
   margin: 0;
 
   .second-text-style();
   color: #ffffff;
-}
 
-.reason--short .reason__number,
-.reason--short .reason__description {
-  color: @gray-text-color;
-}
+  .reason--short & {
+    padding-right: 13px;
+    padding-left: 13px;
 
-.reason--short .reason__description {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.reason__number {
-  padding-bottom: 15px;
+    color: @gray-text-color;
+  }
 }
 
 .reason__illustration {
@@ -82,7 +86,7 @@
 
       height: 19px;
 
-      background-image: url("/../../img/bg-triangle.svg");
+      background-image: url("../img/bg-triangle.svg");
       background-repeat: no-repeat;
       background-position: center bottom;
     }
@@ -111,25 +115,30 @@
   .reason {
     display: flex;
 
-    width: 768px;
+    width: auto;
+    max-width: 768px;
 
     &--reverse {
       flex-direction: row-reverse;
     }
 
     &--short {
+      flex-shrink: 0;
+
       display: block;
-      width: 256px;
+      width: 33.33%;
       margin: 0;
       padding: 45px 30px 44px;
     }
   }
 
   .reason__main {
-    width: 256px;
+    flex-shrink: 0;
+
+    width: 33.33%;
     padding-top: 45px;
-    padding-right: 44px;
-    padding-left: 44px;
+    padding-right: 42px;
+    padding-left: 42px;
   }
 
   .reason__number {
@@ -138,35 +147,35 @@
 
   .reason__title {
     font-size: 21px;
-  }
 
-  .reason--short .reason__title {
-    padding-right: 25px;
-    padding-left: 25px;
+    .reason--short & {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
   }
 
   .reason__illustration {
-    width: 512px;
+    flex-shrink: 0;
+
+    width: 66.66%;
   }
 
   .reason__illustration-image {
-    width: 512px;
+    width: 100%;
     height: 256px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reason {
-    width: 1200px;
+    max-width: 1200px;
 
     &--short {
-      width: 400px;
       padding-bottom: 65px;
     }
   }
 
   .reason__main {
-    width: 400px;
     padding-top: 52px;
     padding-right: 63px;
     padding-left: 63px;
@@ -175,22 +184,21 @@
   .reason__title {
     padding-right: 50px;
     padding-left: 50px;
-  }
 
-  .reason--short .reason__title {
-    padding-right: 90px;
-    padding-left: 90px;
+    .reason--short & {
+      padding-right: 90px;
+      padding-left: 90px;
+    }
   }
 
   .reason__description--bridge {
-    padding-right: 28px;
-    padding-left: 28px;
+    padding-right: 22px;
+    padding-left: 22px;
   }
 
   .reason__illustration {
     position: relative;
 
-    width: 800px;
     height: 256px;
     overflow: hidden;
   }

@@ -4,7 +4,8 @@ function initMap() {
   var myLatLng = {lat: 34.854, lng: -111.830};
   var map = new google.maps.Map(document.querySelector(".map__area"), {
     zoom: 7,
-    center: myLatLng
+    center: myLatLng,
+    scrollwheel: false
   });
 
   var pin = {
@@ -18,6 +19,7 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
+    title: "Седона",
     icon: pin
   });
 }

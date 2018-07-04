@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy:  Седона — Фото и видео</title>
+    <title>Седона — Фото и видео</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
@@ -10,6 +10,7 @@
     <script>
       document.createElement( "picture" );
     </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display:none">
@@ -27,7 +28,7 @@
         </a>
         <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть/ Закрыть меню</span>
+            <span class="visually-hidden">Открыть / Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -44,11 +45,11 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header__lettering page-header__lettering--inner-page" aria-label="Седона">
+        <p class="page-header__lettering page-header__lettering--inner-page" aria-label="Седона">
           <svg class="page-header__lettering-image page-header__lettering-image--inner-page" width="229" height="39" viewBox="0 0 459.754 79.805" role="img">
             <use xlink:href="#for-o-text-sedona"></use>
           </svg>
-        </div>
+        </p>
       </header>
 
       <main class="page-main">
@@ -73,7 +74,7 @@
                 <h3 class="photo__title">Неродные просторы</h3>
                 <p class="photo__author">Автор фото: Борис</p>
               </div>
-              <div class="photo__likes likes">
+              <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
                   <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
                     <use xlink:href="#for-o-icon-like"></use>
@@ -81,7 +82,7 @@
                   <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">1350</span>
-              </div>
+              </p>
             </div>
           </article>
 
@@ -102,7 +103,7 @@
                 <h3 class="photo__title">Местная растительность</h3>
                 <p class="photo__author">Автор фото: Сергей</p>
               </div>
-              <div class="photo__likes likes">
+              <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
                   <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
                     <use xlink:href="#for-o-icon-like"></use>
@@ -110,7 +111,7 @@
                   <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">143</span>
-              </div>
+              </p>
             </div>
           </article>
 
@@ -131,7 +132,7 @@
                 <h3 class="photo__title">Дорога на север</h3>
                 <p class="photo__author">Автор фото: Петр</p>
               </div>
-              <div class="photo__likes likes">
+              <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
                   <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
                     <use xlink:href="#for-o-icon-like"></use>
@@ -139,7 +140,7 @@
                   <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">96</span>
-              </div>
+              </p>
             </div>
           </article>
 
@@ -160,7 +161,7 @@
                 <h3 class="photo__title">Мост Дьявола</h3>
                 <p class="photo__author">Автор фото: Антон</p>
               </div>
-              <div class="photo__likes likes">
+              <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
                   <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation">
                     <use xlink:href="#for-o-icon-like"></use>
@@ -168,7 +169,7 @@
                   <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">254</span>
-              </div>
+              </p>
             </div>
           </article>
         </section>
@@ -180,7 +181,7 @@
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>
           <article class="video__player player">
-            <h3 class="visually-hidden">Видеопрезентация</h3>
+            <h3 class="visually-hidden">Видеопрезентация городка Седоны</h3>
             <div class="player__playback-area">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
@@ -198,26 +199,24 @@
                   <span class="visually-hidden">Перемотать вперед или назад</span>
                 </button>
               </div>
-              <div class="player__buttons">
-                <button class="player__button player__button--replay">
-                  <svg class="player__icon" width="16" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="#for-o-icon-video-replay"></use>
-                  </svg>
-                  <span class="visually-hidden">Повторить</span>
-                </button>
-                <button class="player__button player__button--subtitles">
-                  <svg class="player__icon" width="32" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="#for-o-icon-video-subtitles"></use>
-                  </svg>
-                  <span class="visually-hidden">Субтитры</span>
-                </button>
-                <button class="player__button player__button--fullscreen">
-                  <svg class="player__icon" width="20" height="20" aria-hidden="true" role="presentation">
-                    <use xlink:href="#for-o-icon-video-fullscreen"></use>
-                  </svg>
-                  <span class="visually-hidden">Полный экран</span>
-                </button>
-              </div>
+              <button class="player__button player__button--replay" type="button">
+                <svg class="player__icon" width="16" height="20" aria-hidden="true" role="presentation">
+                  <use xlink:href="#for-o-icon-video-replay"></use>
+                </svg>
+                <span class="visually-hidden">Повторить</span>
+              </button>
+              <button class="player__button player__button--subtitles" type="button">
+                <svg class="player__icon" width="32" height="20" aria-hidden="true" role="presentation">
+                  <use xlink:href="#for-o-icon-video-subtitles"></use>
+                </svg>
+                <span class="visually-hidden">Субтитры</span>
+              </button>
+              <button class="player__button player__button--fullscreen" type="button">
+                <svg class="player__icon" width="20" height="20" aria-hidden="true" role="presentation">
+                  <use xlink:href="#for-o-icon-video-fullscreen"></use>
+                </svg>
+                <span class="visually-hidden">Полный экран</span>
+              </button>
             </div>
           </article>
         </section>
@@ -256,8 +255,5 @@
     </div>
 
     <script src="js/nav.js"></script>
-    <script src="js/picturefill.js" async=""></script>
-    <script src="js/svg4everybody.js"></script>
-    <script>svg4everybody();</script>
   </body>
 </html>

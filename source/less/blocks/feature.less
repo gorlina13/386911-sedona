@@ -12,6 +12,10 @@
     padding-top: 28px;
   }
 
+  &--souvenirs br {
+    display: none;
+  }
+
   &::before {
     content: "";
 
@@ -29,7 +33,7 @@
     width: 39px;
     height: 36px;
 
-    background-image: url("/../../img/icon-house.svg");
+    background-image: url("../img/icon-house.svg");
     background-size: 39px 36px;
   }
 
@@ -39,7 +43,7 @@
     width: 32px;
     height: 38px;
 
-    background-image: url("/../../img/icon-gift.svg");
+    background-image: url("../img/icon-gift.svg");
     background-size: 32px 38px;
   }
 
@@ -50,7 +54,7 @@
     width: 40px;
     height: 35px;
 
-    background-image: url("/../../img/icon-burger.svg");
+    background-image: url("../img/icon-burger.svg");
     background-size: 40px 35px;
   }
 }
@@ -70,22 +74,24 @@
   text-align: left;
 }
 
-.feature--souvenirs br {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
   .feature {
-    width: 256px;
-    padding: 159px 45px 62px;
+    flex-shrink: 0;
+
+    width: 33.33%;
+    padding: 159px 42px 62px;
 
     &--food {
-      padding-right: 49px;
-      padding-left: 49px;
+      padding-right: 46px;
+      padding-left: 46px;
     }
 
     &--souvenirs {
       order: 3;
+    }
+
+    &--souvenirs br {
+      display: inline;
     }
 
     &--lodging::before {
@@ -129,22 +135,17 @@
   .feature__description {
     text-align: center;
   }
-
-  .feature--souvenirs br {
-    display: inline;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .feature {
-    width: 400px;
     padding-right: 55px;
     padding-left: 55px;
     padding-bottom: 83px;
 
     &--souvenirs {
-      padding-right: 90px;
-      padding-left: 90px;
+      padding-right: 84px;
+      padding-left: 84px;
     }
 
     &::before {

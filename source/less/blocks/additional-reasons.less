@@ -7,13 +7,15 @@
 @media (min-width: @tablet-width) {
   .additional-reasons__list {
     display: flex;
+    flex-wrap: wrap;
 
-    width: 768px;
+    width: auto;
+    max-width: 768px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .additional-reasons__list {
-    width: 1200px;
+    max-width: 1200px;
   }
 }

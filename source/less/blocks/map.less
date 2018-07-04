@@ -5,7 +5,7 @@
   min-width: 320px;
   height: 350px;
 
-  background-image: url("/../../img/bg-map-mobile@1x.jpg");
+  background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -15,12 +15,11 @@
     position: absolute;
 
     left: 50%;
-    top: 175px;
+    top: 50%;
 
     width: 27px;
     height: 27px;
-    margin-top: -13.5px;
-    margin-left: -13.5px;
+    transform: translateX(-50%) translateY(-50%);
 
     background-color: #81b4d4;
     border: 5px solid #ffffff;
@@ -28,7 +27,7 @@
   }
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("/../../img/bg-map-mobile@2x.jpg");
+    background-image: url("../img/bg-map-mobile@2x.jpg");
     background-size: 320px auto;
   }
 }
@@ -45,22 +44,22 @@
 
 @media (min-width: @tablet-width) {
   .map {
-    background-image: url("/../../img/bg-map-tablet@1x.jpg");
+    background-image: url("../img/bg-map-tablet@1x.jpg");
     background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("/../../img/bg-map-tablet@2x.jpg");
+      background-image: url("../img/bg-map-tablet@2x.jpg");
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .map {
-    width: 1200px;
-    background-image: url("/../../img/bg-map-desktop@1x.jpg");
+    max-width: 1200px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("/../../img/bg-map-desktop@2x.jpg");
+      background-image: url("../img/bg-map-desktop@2x.jpg");
     }
   }
 }

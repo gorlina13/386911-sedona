@@ -1,4 +1,6 @@
 .site-list {
+  position: relative;
+
   .list-reset();
 
   &::after {
@@ -31,19 +33,20 @@
   &[href] {
     cursor: pointer;
   }
-}
 
-.site-list__item:first-child .site-list__link {
-  border-top-color: transparent;
-}
+  .site-list__item:first-child & {
+    border-top-color: transparent;
+  }
 
-.site-list__item:last-child .site-list__link {
-  border-bottom: none;
+  .site-list__item:last-child & {
+    border-bottom: none;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
   .site-list__link[href] {
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: @sedona-color-mid;
     }
 
@@ -59,8 +62,9 @@
   .site-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 
-    width: 768px;
+    max-width: 768px;
     margin: 0 auto;
 
     &::after {
@@ -71,20 +75,19 @@
   .site-list__item {
     flex-shrink: 0;
 
-    width: 153px;
-  }
+    width: 20%;
 
-  .site-list__item:nth-child(4n+2) {
-    margin-right: 78px;
-  }
+    &:nth-child(4n+2) {
+      margin-right: 10%;
+    }
 
-  .site-list__item:nth-child(4n+3) {
-    margin-left: 78px;
+    &:nth-child(4n+3) {
+      margin-left: 10%;
+    }
   }
 
   .site-list__link {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 10px;
 
     font-size: 14px;
     line-height: 26px;
@@ -92,26 +95,25 @@
 
     background-color: #ffffff;
     border: none;
-  }
 
-  .site-list__link[href] {
-    &:hover {
+    &[href]:hover,
+    &[href]:focus {
       color: @sedona-color;
     }
 
-    &:active {
+    &[href]:active {
       color: rgba(0, 0, 0, 0.3);
     }
-  }
 
-  .site-list__item--active .site-list__link {
-    color: #766357;
+    .site-list__item--active & {
+      color: #766357;
+    }
 
-    &:hover {
+    .site-list__item--active &:hover {
       color: #604e43;
     }
 
-    &:active {
+    .site-list__item--active &:active {
       color: rgba(118, 99, 87, 0.3);
     }
   }
@@ -119,18 +121,6 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    width: 1200px;
-  }
-
-  .site-list__item {
-    width: 239px;
-  }
-
-  .site-list__item:nth-child(4n+2) {
-    margin-right: 122px;
-  }
-
-  .site-list__item:nth-child(4n+3) {
-    margin-left: 122px;
+    max-width: 1200px;
   }
 }

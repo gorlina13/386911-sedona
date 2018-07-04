@@ -8,14 +8,16 @@
 @media (min-width: @tablet-width) {
   .features__list {
     display: flex;
+    flex-wrap: wrap;
 
-    width: 768px;
+    width: auto;
+    max-width: 768px;
     padding: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features__list {
-    width: 1200px;
+    max-width: 1200px;
   }
 }

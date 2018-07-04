@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона — Главная</title>
+    <title>Седона — Главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
@@ -10,6 +10,7 @@
     <script>
       document.createElement( "picture" );
     </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display:none">
@@ -27,7 +28,7 @@
         </a>
         <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть/ Закрыть меню</span>
+            <span class="visually-hidden">Открыть / Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -44,21 +45,21 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header__lettering page-header__lettering--index" aria-label="Добро пожаловать в великолепную Седону!">
+        <p class="page-header__lettering page-header__lettering--index" aria-label="Добро пожаловать в великолепную Седону!">
           <svg class="page-header__lettering-image page-header__lettering-image--index" width="282" height="214" viewBox="0 0 459.754 350.074" role="img">
             <use xlink:href="#for-o-text-sedona-index"></use>
           </svg>
-        </div>
+        </p>
       </header>
 
       <main class="page-main">
-        <h1 class="page-main__title page-main__title--index">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <h1 class="page-main__title page-main__title--index">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="page-main__intro page-main__intro--index">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <section class="reason reason--triangle">
           <div class="reason__main">
             <h2 class="reason__title">Настоящий городок</h2>
-            <p class="reason__number">— №1 —</p>
-            <p class="reason__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            <p class="reason__number">&ndash; №1 &ndash;</p>
+            <p class="reason__description">Седона не аттракцион для&nbsp;туристов, там течет&nbsp;своя&nbsp;жизнь</p>
           </div>
           <figure class="reason__illustration">
             <picture>
@@ -94,8 +95,8 @@
         <section class="reason reason--reverse ">
           <div class="reason__main">
             <h2 class="reason__title">Там есть Мост&nbsp;Дьявола</h2>
-            <p class="reason__number">— №2 —</p>
-            <p class="reason__description reason__description--bridge">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            <p class="reason__number">&ndash; №2 &ndash;</p>
+            <p class="reason__description reason__description--bridge">Да, по нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
           </div>
           <figure class="reason__illustration">
             <picture>
@@ -115,17 +116,17 @@
           <ul class="additional-reasons__list">
             <li class="additional-reasons__item reason reason--short">
               <h3 class="reason__title">Небольшая площадь</h3>
-              <p class="reason__number">— №3 —</p>
+              <p class="reason__number">&ndash; №3 &ndash;</p>
               <p class="reason__description">Все интересные места находятся очень близко</p>
             </li>
             <li class="additional-reasons__item reason reason--short">
               <h3 class="reason__title">Красивая дорога</h3>
-              <p class="reason__number">— №4 —</p>
+              <p class="reason__number">&ndash; №4 &ndash;</p>
               <p class="reason__description">Ехать в Седону из Лас&#8209;Вегаса совсем не&nbsp;скучно!</p>
             </li>
             <li class="additional-reasons__item reason reason--short">
               <h3 class="reason__title">Мало туристов</h3>
-              <p class="reason__number">— №5 —</p>
+              <p class="reason__number">&ndash; №5 &ndash;</p>
               <p class="reason__description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ul>
@@ -179,10 +180,7 @@
     </div>
 
     <script src="js/nav.js"></script>
-    <script src="js/picturefill.js" async></script>
-    <script src="js/svg4everybody.js"></script>
-    <script>svg4everybody();</script>
     <script src="js/map.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPChudeBDq6E5cWVAiQcCxzzbQm4o-93c&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPChudeBDq6E5cWVAiQcCxzzbQm4o-93c&callback=initMap" async defer></script>
   </body>
 </html>

@@ -17,10 +17,10 @@
   text-decoration: none;
   text-transform: uppercase;
   color: @gray-text-color;
-}
 
-.booking__text br {
-  display: none;
+  & br {
+    display: none;
+  }
 }
 
 .booking__lead {
@@ -37,7 +37,8 @@
 
 @media (min-width: @tablet-width) {
   .booking {
-    width: 768px;
+    width: auto;
+    max-width: 768px;
     padding-top: 49px;
     padding-bottom: 58px;
   }
@@ -46,10 +47,10 @@
     width: 458px;
     margin: 0 auto;
     padding-bottom: 42px;
-  }
 
-  .booking__text br {
-    display: inline;
+    & br {
+      display: inline;
+    }
   }
 
   .booking__lead {
@@ -62,7 +63,7 @@
 
 @media (min-width: @desktop-width) {
   .booking {
-    width: 1200px;
+    max-width: 1200px;
     padding-top: 48px;
     padding-bottom: 66px;
   }

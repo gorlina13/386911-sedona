@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона — Форма для отзыва</title>
+    <title>Седона — Форма для отзыва</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
@@ -10,6 +10,7 @@
     <script>
       document.createElement( "picture" );
     </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display:none">
@@ -27,7 +28,7 @@
         </a>
         <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть/ Закрыть меню</span>
+            <span class="visually-hidden">Открыть / Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -44,11 +45,11 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header__lettering page-header__lettering--inner-page" aria-label="Седона">
+        <p class="page-header__lettering page-header__lettering--inner-page" aria-label="Седона">
           <svg class="page-header__lettering-image page-header__lettering-image--inner-page" width="229" height="39" viewBox="0 0 459.754 79.805" role="img">
             <use xlink:href="#for-o-text-sedona"></use>
           </svg>
-        </div>
+        </p>
       </header>
 
       <main class="page-main">
@@ -132,10 +133,10 @@
             <textarea class="feedback-form__textarea feedback-form__text-input" name="emotions" id="emotions-field" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
-          <div class="feedback-form__submit">
+          <p class="feedback-form__submit">
             <button class="feedback-form__button button button--submit" type="submit">Отправить отзыв</button>
-            <span class="feedback-form__footnote"><sup>*</sup> — обязательные поля</span>
-          </div>
+            <span class="feedback-form__footnote"><sup>*</sup> &ndash; обязательные поля</span>
+          </p>
         </form>
       </main>
 
@@ -170,25 +171,22 @@
         </p>
       </footer>
 
-      <div class="modal modal--error">
+      <section class="modal modal--error">
         <p class="modal__title modal__title--error">Что-то пошло не так!</p>
         <p class="modal__description modal__description--error">Проверьте&nbsp;поля,&nbsp;выделенные красным, скорее&nbsp;всего&nbsp;вы забыли&nbsp;их&nbsp;заполнить</p>
         <button class="modal__button button button--error" type="button">OK</button>
-      </div>
+      </section>
 
-      <div class="modal modal--success">
+      <section class="modal modal--success">
         <div class="modal__text">
           <p class="modal__title modal__title--success">Ваш отзыв отправлен!</p>
           <p class="modal__description modal__description--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
         </div>
-          <button class="modal__button button button--success" type="button">Закрыть окно</button>
-      </div>
+        <button class="modal__button button button--success" type="button">Закрыть окно</button>
+      </section>
       <div class="overlay"></div>
     </div>
 
     <script src="js/nav.js"></script>
-    <script src="js/picturefill.js" async=""></script>
-    <script src="js/svg4everybody.js"></script>
-    <script>svg4everybody();</script>
   </body>
 </html>
