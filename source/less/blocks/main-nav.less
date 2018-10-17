@@ -2,6 +2,7 @@
   position: relative;
 
   flex-shrink: 0;
+  align-self: center;
 
   width: 320px;
   margin: 0 auto;
@@ -16,7 +17,6 @@
   right: 0;
   z-index: 20;
 
-  display: block;
   width: 64px;
   height: 55px;
 
@@ -26,7 +26,6 @@
 
 .main-nav--closed .main-nav__toggle {
   bottom: -56px;
-
 
   background-color: #ffffff;
 
@@ -58,7 +57,6 @@
     top: 26px;
     right: 18px;
 
-    display: block;
     width: 28px;
     height: 4px;
 
@@ -95,7 +93,9 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: auto;
+    align-self: stretch;
+
+    width: 100%;
     margin: 0;
 
     color: #000000;

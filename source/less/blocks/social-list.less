@@ -2,14 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
 
+  width: 280px;
   .list-reset();
+  margin: 0 auto;
 }
 
 .social-list__item {
   flex-shrink: 0;
 
   width: 46px;
+  margin-bottom: 6px;
 
   &:not(:last-child) {
     margin-right: 6px;
@@ -30,13 +35,15 @@
     content: "";
 
     position: absolute;
+    left: 50%;
 
     background-repeat: no-repeat;
     background-position: center;
+
+    transform: translateX(-50%);
   }
 
   &--twitter::after {
-    left: 14px;
     top: 16.5px;
 
     width: 18px;
@@ -47,8 +54,7 @@
   }
 
   &--facebook::after {
-    left: 18.5px;
-    top: 14.5px;
+    top: 14px;
 
     width: 9px;
     height: 19px;
@@ -57,7 +63,6 @@
   }
 
   &--youtube::after {
-    left: 13px;
     top: 17px;
 
     width: 20px;
@@ -85,12 +90,6 @@
     flex-shrink: 0;
 
     width: 33.33%;
-    max-width: 256px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .social-list {
-    max-width: 400px;
+    padding: 0 20px;
   }
 }

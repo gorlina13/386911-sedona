@@ -1,23 +1,15 @@
-.features__list {
-  width: 320px;
+.features {
   .list-reset();
-  margin: 0 auto;
   padding: 8px 20px 38px;
 }
 
 @media (min-width: @tablet-width) {
-  .features__list {
+  .features {
+    flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
 
-    width: auto;
-    max-width: 768px;
+    width: 100%;
     padding: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .features__list {
-    max-width: 1200px;
   }
 }

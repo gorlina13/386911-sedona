@@ -1,5 +1,10 @@
 .hashtag {
+  max-width: 280px;
+  margin: 0 auto;
   padding-bottom: 34px;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hashtag__link {
@@ -13,8 +18,10 @@
   .hashtag {
     flex-shrink: 0;
 
+    display: block;
     width: 33.33%;
-    max-width: 256px;
+    max-width: 33.33%;
+    margin-right: 0;
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 60px;
@@ -25,7 +32,6 @@
 
 @media (min-width: @desktop-width) {
   .hashtag {
-    max-width: 400px;
     padding-right: 60px;
 
     text-align: center;

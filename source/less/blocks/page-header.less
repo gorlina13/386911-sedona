@@ -14,9 +14,14 @@
   order: 2;
   flex-shrink: 0;
 
+  width: 100%;
   display: block;
   margin-bottom: -27px;
   padding: 0 20px;
+
+  &[href] {
+    cursor: pointer;
+  }
 }
 
 .page-header__logo-image {
@@ -36,16 +41,15 @@
 
   width: 100%;
   margin: 0;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 0 20px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
 
   &--index {
     min-height: 389px;
-    padding-top: 35px;
-    padding-bottom: 30px;
+    padding-top: 45px;
+    padding-bottom: 40px;
 
     background-color: #9297a1;
     background-position: center;
@@ -53,8 +57,8 @@
 
   &--inner-page {
     min-height: 158px;
-    padding-top: 31px;
-    padding-bottom: 48px;
+    padding-top: 36px;
+    padding-bottom: 53px;
 
     background-color: #816365;
     background-position: center bottom;
@@ -83,6 +87,8 @@
 }
 
 .page-header__lettering-image {
+  flex-shrink: 0;
+
   display: block;
   margin: 0 auto;
 
@@ -99,6 +105,8 @@
 
 @media (min-width: @tablet-width) {
   .page-header__logo {
+    align-self: center;
+
     width: 102px;
     height: 83px;
     margin-top: -56px;
@@ -116,14 +124,14 @@
 
     &--index {
       min-height: 518px;
-      padding-top: 44px;
-      padding-bottom: 57px;
+      padding-top: 49px;
+      padding-bottom: 62px;
     }
 
     &--inner-page {
       min-height: 290px;
-      padding-top: 35px;
-      padding-bottom: 57px;
+      padding-top: 40px;
+      padding-bottom: 62px;
 
       background-position: right bottom;
     }
@@ -174,8 +182,8 @@
 
     &--inner-page {
       min-height: 301px;
-      padding-top: 49px;
-      padding-bottom: 67px;
+      padding-top: 52px;
+      padding-bottom: 70px;
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {

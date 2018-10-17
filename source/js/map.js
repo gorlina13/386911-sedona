@@ -1,25 +1,48 @@
-"use strict";
+'use strict';
 
 function initMap() {
-  var myLatLng = {lat: 34.854, lng: -111.830};
-  var map = new google.maps.Map(document.querySelector(".map__area"), {
-    zoom: 7,
-    center: myLatLng,
-    scrollwheel: false
-  });
+  var ZOOM = 7;
+  var TITLE = 'Седона';
 
-  var pin = {
-    url: "img/icon-map-marker.svg",
-    scaledSize: new google.maps.Size(25, 25),
-    size: new google.maps.Size(25, 25),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(12.5, 12.5)
+  var LAT_LNG = {
+    lat: 34.868162,
+    lng: -111.764224
   };
 
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: "Седона",
-    icon: pin
-  });
+  var MAP_OPTIONS = {
+    zoom: ZOOM,
+    center: LAT_LNG,
+    scrollwheel: false
+  };
+
+  var PIN_OPTIONS = {
+    url: 'img/icon-map-marker.svg',
+    width: 27,
+    height: 27,
+    originX: 0,
+    originY: 0,
+    anchorX: 13.5,
+    anchorY: 13.5
+  }
+
+  var mapCanvas = document.querySelector('.map__interactive-area');
+
+  if (mapCanvas !== null) {
+    var map = new google.maps.Map(mapCanvas, MAP_OPTIONS);
+
+    var pin = {
+      url: PIN_OPTIONS.url,
+      size: new google.maps.Size(PIN_OPTIONS.width, PIN_OPTIONS.height),
+      origin: new google.maps.Point(PIN_OPTIONS.originX, PIN_OPTIONS.originY),
+      anchor: new google.maps.Point(PIN_OPTIONS.anchorX, PIN_OPTIONS.anchorY),
+      scaledSize: new google.maps.Size(PIN_OPTIONS.width, PIN_OPTIONS.height)
+    };
+
+    var marker = new google.maps.Marker({
+      position: LAT_LNG,
+      map: map,
+      title: TITLE,
+      icon: pin
+    });
+  }
 }

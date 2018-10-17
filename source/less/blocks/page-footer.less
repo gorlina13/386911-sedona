@@ -6,25 +6,18 @@
   background-color: @footer-bg-color;
 }
 
-.page-footer__hashtag {
-  margin: 0;
-}
-
-.page-footer__copyright {
-  margin: 0;
-}
-
 @media (min-width: @tablet-width) {
   .page-footer {
     display: flex;
+    max-width: 768px;
+    margin: 0 auto;
     padding: 36px 0;
+    padding-bottom: 30px;
   }
+}
 
-  .page-footer__hashtag {
-    margin-left: auto;
-  }
-
-  .page-footer__copyright {
-    margin-right: auto;
+@media (min-width: @desktop-width) {
+  .page-footer {
+    max-width: 1200px;
   }
 }

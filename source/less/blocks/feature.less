@@ -5,6 +5,8 @@
   padding-left: 50px;
 
   color: #000000;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   background-color: #ffffff;
 
@@ -79,23 +81,26 @@
     flex-shrink: 0;
 
     width: 33.33%;
-    padding: 159px 42px 62px;
-
-    &--food {
-      padding-right: 46px;
-      padding-left: 46px;
-    }
+    padding: 159px 45px 62px;
 
     &--souvenirs {
       order: 3;
+
+      padding-right: 42px;
+      padding-left: 42px;
     }
 
     &--souvenirs br {
       display: inline;
     }
 
+    &::before {
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+
     &--lodging::before {
-      left: 90px;
       top: 60px;
 
       width: 76px;
@@ -105,7 +110,6 @@
     }
 
     &--souvenirs::before {
-      left: 96px;
       top: 57px;
 
       width: 64px;
@@ -115,7 +119,6 @@
     }
 
     &--food::before {
-      left: 90px;
       top: 63px;
 
       width: 76px;
@@ -146,14 +149,6 @@
     &--souvenirs {
       padding-right: 84px;
       padding-left: 84px;
-    }
-
-    &::before {
-      left: 162px;
-    }
-
-    &--souvenirs::before {
-      left: 168px;
     }
   }
 

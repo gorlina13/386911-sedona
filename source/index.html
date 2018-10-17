@@ -31,7 +31,7 @@
             <span class="visually-hidden">Открыть / Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item site-list__item--current">
               <a class="site-list__link">Главная</a>
             </li>
             <li class="site-list__item">
@@ -46,7 +46,7 @@
           </ul>
         </nav>
         <p class="page-header__lettering page-header__lettering--index" aria-label="Добро пожаловать в великолепную Седону!">
-          <svg class="page-header__lettering-image page-header__lettering-image--index" width="282" height="214" viewBox="0 0 459.754 350.074" role="img">
+          <svg class="page-header__lettering-image page-header__lettering-image--index" width="282" height="214" viewBox="0 0 459.754 350.074" role="img" focusable="false">
             <use xlink:href="#for-o-text-sedona-index"></use>
           </svg>
         </p>
@@ -58,7 +58,7 @@
         <section class="reason reason--triangle">
           <div class="reason__main">
             <h2 class="reason__title">Настоящий городок</h2>
-            <p class="reason__number">&ndash; №1 &ndash;</p>
+            <p class="reason__number">&ndash;&nbsp;№1&nbsp;&ndash;</p>
             <p class="reason__description">Седона не аттракцион для&nbsp;туристов, там течет&nbsp;своя&nbsp;жизнь</p>
           </div>
           <figure class="reason__illustration">
@@ -72,11 +72,7 @@
               <img class="reason__illustration-image reason__illustration-image--city" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Вид Седоны">
             </picture>
           </figure>
-        </section>
-
-        <section class="features">
-          <h2 class="visually-hidden">Что вас ждет в Седоне?</h2>
-          <ul class="features__list">
+          <ul class="reason__features features">
             <li class="features__item feature feature--lodging">
               <h3 class="feature__title">Жилье</h3>
               <p class="feature__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -87,15 +83,15 @@
             </li>
             <li class="features__item feature feature--food">
               <h3 class="feature__title">Еда</h3>
-              <p class="feature__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <p class="feature__description">Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!</p>
             </li>
           </ul>
         </section>
 
-        <section class="reason reason--reverse ">
+        <section class="reason reason--reverse">
           <div class="reason__main">
             <h2 class="reason__title">Там есть Мост&nbsp;Дьявола</h2>
-            <p class="reason__number">&ndash; №2 &ndash;</p>
+            <p class="reason__number">&ndash;&nbsp;№2&nbsp;&ndash;</p>
             <p class="reason__description reason__description--bridge">Да, по нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
           </div>
           <figure class="reason__illustration">
@@ -116,17 +112,17 @@
           <ul class="additional-reasons__list">
             <li class="additional-reasons__item reason reason--short">
               <h3 class="reason__title">Небольшая площадь</h3>
-              <p class="reason__number">&ndash; №3 &ndash;</p>
+              <p class="reason__number">&ndash;&nbsp;№3&nbsp;&ndash;</p>
               <p class="reason__description">Все интересные места находятся очень близко</p>
             </li>
             <li class="additional-reasons__item reason reason--short">
               <h3 class="reason__title">Красивая дорога</h3>
-              <p class="reason__number">&ndash; №4 &ndash;</p>
+              <p class="reason__number">&ndash;&nbsp;№4&nbsp;&ndash;</p>
               <p class="reason__description">Ехать в Седону из Лас&#8209;Вегаса совсем не&nbsp;скучно!</p>
             </li>
             <li class="additional-reasons__item reason reason--short">
               <h3 class="reason__title">Мало туристов</h3>
-              <p class="reason__number">&ndash; №5 &ndash;</p>
+              <p class="reason__number">&ndash;&nbsp;№5&nbsp;&ndash;</p>
               <p class="reason__description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ul>
@@ -143,7 +139,18 @@
 
         <section class="map">
           <h2 class="visually-hidden">Карта региона</h2>
-          <div class="map__area"></div>
+          <p class="map__illustration">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+              <img class="map__illustration-image" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Седона и окрестности">
+            </picture>
+          </p>
+          <p class="map__interactive-area" aria-label="Седона и окрестности на карте Google"></p>
         </section>
       </main>
 
@@ -171,7 +178,7 @@
         <p class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
-            <svg class="copyright__logo-image" width="26.943" height="34.09" role="img">
+            <svg class="copyright__logo-image" width="26.943" height="34.09" role="img" focusable="false">
               <use xlink:href="#for-o-logo-htmlacademy"></use>
             </svg>
           </a>
