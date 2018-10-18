@@ -76,10 +76,10 @@
               </div>
               <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
-                  <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation" focusable="false">
+                  <span class="visually-hidden">Нравится!</span>
+                  <svg class="likes__like-icon" width="22" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#for-o-icon-like"></use>
                   </svg>
-                  <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">1350</span>
               </p>
@@ -105,10 +105,10 @@
               </div>
               <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
-                  <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation" focusable="false">
+                  <span class="visually-hidden">Нравится!</span>
+                  <svg class="likes__like-icon" width="22" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#for-o-icon-like"></use>
                   </svg>
-                  <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">143</span>
               </p>
@@ -134,10 +134,10 @@
               </div>
               <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
-                  <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation" focusable="false">
+                  <span class="visually-hidden">Нравится!</span>
+                  <svg class="likes__like-icon" width="22" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#for-o-icon-like"></use>
                   </svg>
-                  <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">96</span>
               </p>
@@ -163,10 +163,10 @@
               </div>
               <p class="photo__likes likes">
                 <button class="likes__like-button" type="button">
-                  <svg class="likes__like-icon" width="22" height="20" aria-hidden="true" role="presentation" focusable="false">
+                  <span class="visually-hidden">Нравится!</span>
+                  <svg class="likes__like-icon" width="22" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#for-o-icon-like"></use>
                   </svg>
-                  <span class="visually-hidden">Нравится!</span>
                 </button>
                 <span class="likes__count">254</span>
               </p>
@@ -175,47 +175,41 @@
         </section>
 
         <section class="video">
-          <h2 class="visually-hidden">Видео Седоны</h2>
+          <h2 class="visually-hidden">Видео</h2>
           <p class="video__text">
             <b class="video__lead">Все еще сомневаетесь?</b>
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>
           <article class="video__player player">
-            <h3 class="visually-hidden">Видеопрезентация городка Седоны</h3>
-            <div class="player__playback-area">
-              <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
-
-                <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-                <img class="player__poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видеопрезентация Седоны">
-              </picture>
-            </div>
+            <h3 class="visually-hidden">Видеопрезентация Седоны</h3>
+            <p class="player__playback-area">
+              <video class="player__presentation" src="#" preload="none" width="320" height="201"></video>
+            </p>
             <div class="player__controls">
               <div class="player__scale">
-                <button class="player__scroller" type="button">
-                  <span class="visually-hidden">Перемотать вперед или назад</span>
-                </button>
+                <div class="player__bar">
+                  <button class="player__scroller" type="button">
+                    <span class="visually-hidden">Перемотать вперед или назад</span>
+                  </button>
+                </div>
               </div>
               <button class="player__button player__button--replay" type="button">
-                <svg class="player__icon" width="16" height="20" aria-hidden="true" role="presentation" focusable="false">
+                <span class="visually-hidden">Повторить</span>
+                <svg class="player__icon" width="16" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                   <use xlink:href="#for-o-icon-video-replay"></use>
                 </svg>
-                <span class="visually-hidden">Повторить</span>
               </button>
               <button class="player__button player__button--subtitles" type="button">
-                <svg class="player__icon" width="32" height="20" aria-hidden="true" role="presentation" focusable="false">
+                <span class="visually-hidden">Субтитры</span>
+                <svg class="player__icon" width="32" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                   <use xlink:href="#for-o-icon-video-subtitles"></use>
                 </svg>
-                <span class="visually-hidden">Субтитры</span>
               </button>
               <button class="player__button player__button--fullscreen" type="button">
-                <svg class="player__icon" width="20" height="20" aria-hidden="true" role="presentation" focusable="false">
+                <span class="visually-hidden">Полный экран</span>
+                <svg class="player__icon" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                   <use xlink:href="#for-o-icon-video-fullscreen"></use>
                 </svg>
-                <span class="visually-hidden">Полный экран</span>
               </button>
             </div>
           </article>
