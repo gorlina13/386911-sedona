@@ -48,7 +48,9 @@
     width: 458px;
 
     &--submit {
-      width: 324px;
+      flex-shrink: 0;
+
+      width: 50%;
       margin: 0;
       padding-right: 27px;
     }
@@ -64,11 +66,5 @@
 
       font-size: 21px;
     }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .button--submit {
-    width: 480px;
   }
 }

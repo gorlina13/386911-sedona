@@ -60,7 +60,7 @@
             <legend class="feedback-form__legend">Представьтесь:</legend>
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--name">
-                <input class="feedback-form__text-input" type="text" name="first-name" id="first-name-field" placeholder="Петр" required>
+                <input class="feedback-form__text-input" type="text" name="first-name" id="first-name-field" placeholder="Петр" required autofocus>
                 <label class="feedback-form__text-label" for="first-name-field">Имя<sup>*</sup>:</label>
               </li>
               <li class="feedback-form__item feedback-form__item--name">
@@ -79,7 +79,9 @@
             <ul class="feedback-form__list">
               <li class="feedback-form__item feedback-form__item--contacts">
                 <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--tel" type="tel" name="tel" id="tel-field" placeholder="Введите телефон" required>
-                <label class="feedback-form__text-label" for="tel-field"><span>Контактный</span> телефон<sup>*</sup>:</label>
+                <label class="feedback-form__text-label" for="tel-field">
+                  <span class="feedback-form__addition">Контактный</span> телефон<sup>*</sup>:
+                </label>
               </li>
               <li class="feedback-form__item feedback-form__item--contacts">
                 <input class="feedback-form__text-input feedback-form__text-input--contacts feedback-form__text-input--email" type="email" name="email" id="email-field" placeholder="Введите e-mail" required>
@@ -130,12 +132,12 @@
 
           <fieldset class="feedback-form__fieldset feedback-form__fieldset--emotions">
             <legend class="feedback-form__legend">Опишите свои эмоции:</legend>
-            <textarea class="feedback-form__textarea feedback-form__text-input" name="emotions" id="emotions-field" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="feedback-form__textarea feedback-form__text-input" name="emotions" id="emotions-field" rows="6" cols="30" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
           <p class="feedback-form__submit">
             <button class="feedback-form__button button button--submit" type="submit">Отправить отзыв</button>
-            <span class="feedback-form__footnote"><sup>*</sup> &ndash; обязательные поля</span>
+            <span class="feedback-form__footnote"><sup>*</sup>&nbsp;&ndash;&nbsp;обязательные поля</span>
           </p>
         </form>
       </main>
@@ -171,19 +173,20 @@
         </p>
       </footer>
 
-      <section class="modal modal--error">
-        <p class="modal__title modal__title--error">Что-то пошло не так!</p>
+      <section class="modal modal--error" role="dialog" aria-labelledby="error-title">
+        <h2 class="modal__title modal__title--error" id="error-title">Что-то пошло не так!</h2>
         <p class="modal__description modal__description--error">Проверьте&nbsp;поля,&nbsp;выделенные красным, скорее&nbsp;всего&nbsp;вы забыли&nbsp;их&nbsp;заполнить</p>
         <button class="modal__button button button--error" type="button">OK</button>
       </section>
 
-      <section class="modal modal--success">
+      <section class="modal modal--success" role="dialog" aria-labelledby="success-title">
         <div class="modal__text">
-          <p class="modal__title modal__title--success">Ваш отзыв отправлен!</p>
+          <h2 class="modal__title modal__title--success" id="success-title">Ваш отзыв отправлен!</h2>
           <p class="modal__description modal__description--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <button class="modal__button button button--success" type="button">Закрыть окно</button>
       </section>
+
       <div class="overlay"></div>
     </div>
 
