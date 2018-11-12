@@ -1,7 +1,19 @@
+@keyframes roll-in {
+  0% {
+    transform: translate(-2000px, -50%) rotate(-180deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
 .modal {
   position: fixed;
-  z-index: 30;
-  top: 50vh;
+  z-index: 50;
+  top: 50%;
   left: 50%;
 
   display: none;
@@ -15,7 +27,7 @@
 
 
   &--error {
-    padding: 40px 20px 35px;
+    padding-bottom: 35px;
 
     background-color: #ffffff;
   }
@@ -28,34 +40,40 @@
 
   &--show {
     display: block;
+
+    animation: roll-in 0.6s ease-out forwards;
   }
-}
 
-.modal__text {
-  padding: 42px 20px 0;
-
-  background-color: #ffffff;
+  &--no-animation {
+    animation: none;
+  }
 }
 
 .modal__title {
   margin: 0;
-  padding-bottom: 26px;
+  padding: 40px 20px 26px;
 
   .primary-text-style();
+
+  background-color: #ffffff;
+
+  .modal--success & {
+    padding-top: 42px;
+  }
 }
 
 .modal__description {
   margin: 0;
+  padding: 0 45px 23px;
 
   .second-text-style();
   line-height: 24px;
 
-  &--error {
-    padding: 0 25px 23px;
-  }
+  background-color: #ffffff;
 
-  &--success {
-    padding: 0 25px 33px;
+  .modal--success & {
+    margin-bottom: 20px;
+    padding-bottom: 33px;
   }
 }
 
@@ -63,7 +81,7 @@
   .modal {
     &--error {
       width: 400px;
-      padding: 54px 60px 49px;
+      padding-bottom: 49px;
     }
 
     &--success {
@@ -72,27 +90,27 @@
     }
   }
 
-  .modal__text {
-    padding: 56px 60px 0;
-  }
-
   .modal__title {
     font-size: 30px;
     line-height: 40px;
 
-    &--error {
-      padding-left: 20px;
-      padding-right: 20px;
+    .modal--error & {
+      padding: 54px 80px 26px;
     }
 
-    &--success {
-      padding-bottom: 24px;
+    .modal--success & {
+      padding: 56px 60px 24px;
     }
   }
 
   .modal__description {
-    &--error {
-      padding: 0 0 30px;
+    .modal--error & {
+      padding: 0 60px 30px;
+    }
+
+    .modal--success & {
+      margin-bottom: 44px;
+      padding: 0 85px 33px;
     }
   }
 }
